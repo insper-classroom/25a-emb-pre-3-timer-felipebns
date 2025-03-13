@@ -34,6 +34,13 @@ int main() {
     while (true) {
 
         if (flag_f_r) {
+            uint32_t start_ms = to_ms_since_boot(get_absolute_time());
+            uint32_t end_ms = start_ms + 500;
+            if (to_ms_since_boot(get_absolute_time()) >= end_ms){
+                gpio_put(LED_PIN_R, 1);
+            }
+        } else {
+            gpio_put(LED_PIN_R, 0);
         }
     }
 }
