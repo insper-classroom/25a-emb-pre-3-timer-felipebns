@@ -51,5 +51,6 @@ int main() {
             gpio_put(LED_PIN_R, !gpio_get(LED_PIN_R));
             g_timer_0 = 0;
         } 
+        
     }
 }
